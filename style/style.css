@@ -1,0 +1,196 @@
+/* in this project i try to use only grid proparty as much i can.*/
+
+/* don't use any image which ratio of height/width is more then 3 */
+
+/*pre define stle*/
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* style for whole body secction*/
+body{
+  font-family: arial, helvetica;
+  background: #f0f0f0;
+
+}
+
+/*
+  this variable are used to make the site responsive.
+*/
+:root {
+  --columns_in_gallery: 4;
+  --grid_gap: 20px;
+  --logo_fsize: 1.8rem;
+  --btn_fsize:1rem;
+  --title_fsize: 0.9rem;
+}
+
+/*
+  this is the main container , which contain the whole project.
+  and the sections are menu-bar then the gallery section and the footer section.
+*/
+.container{
+  margin: 0 auto;
+  width: 95%;/*fixed the limit of main container width*/
+}
+
+/*
+  this is menu
+*/
+.menubar{
+  padding: 0.5rem 0;
+
+  width: 100%;
+  display: grid;
+  grid-template-columns:auto max-content ;
+  grid-template-rows: min-content;
+  align-items: center;
+}
+.menubar .logo{
+}
+.menu_items{
+  display: grid;
+  grid-template-columns: repeat(6,min-content);
+  grid-template-rows: min-content;
+}
+.btn{
+  padding: .5rem;
+  margin-left: 0.5rem;
+  background-image: linear-gradient(to right,#31cc0fff, #fff0);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+
+
+
+/*this is mainly the image container for make a gallery.*/
+.img_container{
+  margin: 2rem auto;
+  justify-items: center;
+  display: grid;
+  grid-template-columns: repeat(var(--columns_in_gallery),1fr);
+  /*here var(--column_in_gallery) is define how meny column we want to draw in gallery.*/
+  grid-template-rows: 1fr;
+  grid-gap: var(--grid_gap);
+  /*here var(--grid_gap) is define how much gap between grid items */
+  grid-auto-rows: 1fr;
+}
+.img_item{
+  position: relative;
+  /*position ralative because the title of image's position is absolute and it will stay upper of image.*/
+  overflow: hidden;
+}
+.img_item img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* object-fit cover; it will cover the intire image block and show center position of image.*/
+}
+.img_item p{
+  display: none;
+  /*initialy this title will be hidden. after hover on image block, this title will show.*/
+}
+.img_item:hover{
+  box-shadow: 0px 0px 5px #31cc0f99;
+}
+.img_item:hover p{
+  display: block;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 1rem;
+  background: #ffffff76;
+  color: #0f0f0fff;
+  text-align: justify;
+}
+.img_item:hover img{
+  opacity: 0.8;
+}
+
+
+.footer{
+  background: #d0d0d0d0 ;
+  text-align: center;
+  padding: 0.5rem;
+}
+
+
+p{
+  font-size: var(--title_fsize);
+}
+.logo{
+  font-size: var(--logo_fsize);
+}
+
+
+
+@media only screen and (min-width: 7500px) {
+  :root {
+    --columns_in_gallery: 12;
+    --grid_gap: 75px;
+    --logo_fsize: 4rem;
+    --title_fsize: 2.5rem;
+  }
+}
+@media only screen and (min-width:5000px) and (max-width: 7499px) {
+  :root {
+    --columns_in_gallery: 10;
+    --grid_gap: 65px;
+    --logo_fsize: 3.5rem;
+    --title_fsize: 2.5rem;
+  }
+}
+@media only screen and (min-width:3000px) and (max-width: 4999px) {
+  :root {
+    --columns_in_gallery: 8;
+    --grid_gap: 50px;
+    --logo_fsize: 3rem;
+    --title_fsize: 1.7rem;
+  }
+}
+@media only screen and (min-width:2000px) and (max-width: 2999px) {
+  :root {
+    --columns_in_gallery: 6;
+    --grid_gap: 40px;
+    --logo_fsize: 2.5rem;
+    --title_fsize: 1.7rem;
+  }
+}
+@media only screen and (min-width:1700px) and (max-width: 1999px) {
+  :root {
+    --columns_in_gallery: 5;
+    --grid_gap: 30px;
+    --logo_fsize: 2rem;
+    --title_fsize: 1.4rem;
+  }
+}
+@media only screen and (min-width:560px) and (max-width: 960px) {
+  :root {
+    --columns_in_gallery: 3;
+    --grid_gap: 15px;
+    --logo_fsize: 1.5rem;
+    --title_fsize: 1.1rem;
+  }
+}
+@media only screen and (min-width:400px) and (max-width: 559px) {
+  :root {
+    --columns_in_gallery: 2;
+    --grid_gap: 12px;
+    --logo_fsize: 1.2rem;
+    --title_fsize: 0.8rem;
+  }
+}
+
+@media only screen and (min-width:50px) and (max-width: 399px) {
+  :root {
+    --columns_in_gallery: 1;
+    --grid_gap: 10px;
+    --logo_fsize: 1rem;
+    --title_fsize: 0.65rem;
+  }
+  .menu_items{
+    display: none;
+  }
+}
