@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>photo gellary 01</title>
+	<title>Image Gallery with CSS Grid version 0.0.02</title>
 	<link rel="stylesheet" href="style/style.css">
 
 
@@ -24,37 +24,49 @@
 			</div>
 		</div>
 
-		<div class="img_container"><!--container for image gallery-->
-			<div class="img_item"><!--block of one image. contain image and title.-->
-				<a href="img/02.jpg"><img src="img/02.jpg" alt="hot pizza"><p>Lorem ipsum dolor sit amet, elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></a>
+		<div class="img_container grid"><!--container for image gallery-->
+			<div class="img_item row-2 col-3"><!--block of one image. contain image and title.-->
+				<a href="img/01.jpg "><img src="img/01.jpg" alt="hot pizza"><p>Lorem ipsum dolor sit amet, elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></a>
 			</div>
-			<div class="img_item"><a href="img/01.jpg"><img src="img/01.jpg" alt="hot pizza"><p>this is title of photo</p></a></div>
-			<div class="img_item"><a href="img/03.jpg"><img src="img/03.jpg" alt="hot pizza"><p>this is title of photo</p></a></div>
-			<div class="img_item"><a href="img/04.jpg"><img src="img/04.jpg" alt="hot pizza"><p>this is title of photo</p></a></div>
-			<div class="img_item"><a href="img/05.jpg"><img src="img/05.jpg" alt="hot pizza"><p>this is title of photo</p></a></div>
-			<div class="img_item"><a href="img/06.jpg"><img src="img/06.jpg" alt="hot pizza"><p>this is title of photo</p></a></div>
-			<div class="img_item"><a href="img/07.jpg"><img src="img/07.jpg" alt="hot pizza"><p>this is title of photo</p></a></div>
-			<div class="img_item"><a href="img/08.jpg"><img src="img/08.jpg" alt="hot pizza"><p>this is title of photo</p></a></div>
-			<div class="img_item"><a href="img/09.jpg"><img src="img/09.jpg" alt="hot pizza"><p>this is title of photo</p></a></div>
-			<div class="img_item"><a href="img/10.jpg"><img src="img/10.jpg" alt="hot pizza"><p>this is title of photo</p></a></div>
-			<div class="img_item"><a href="img/11.jpg"><img src="img/11.jpg" alt="hot pizza"><p>this is title of photo</p></a></div>
-			<div class="img_item"><a href="img/12.jpg"><img src="img/12.jpg" alt="hot pizza"><p>this is title of photo</p></a></div>
-			<div class="img_item"><a href="img/01.jpg"><img src="img/01.jpg" alt="hot pizza"><p>this is title of photo</p></a></div>
-			<div class="img_item"><a href="img/02.jpg"><img src="img/02.jpg" alt="hot pizza"><p>this is title of photo</p></a></div>
-			<div class="img_item"><a href="img/03.jpg"><img src="img/03.jpg" alt="hot pizza"></a></div>
-			<div class="img_item"><a href="img/04.jpg"><img src="img/04.jpg" alt="hot pizza"></a></div>
-			<div class="img_item"><a href="img/05.jpg"><img src="img/05.jpg" alt="hot pizza"></a></div>
-			<div class="img_item"><a href="img/06.jpg"><img src="img/06.jpg" alt="hot pizza"></a></div>
-			<div class="img_item"><a href="img/07.jpg"><img src="img/07.jpg" alt="hot pizza"></a></div>
-			<div class="img_item"><a href="img/08.jpg"><img src="img/08.jpg" alt="hot pizza"></a></div>
-			<div class="img_item"><a href="img/09.jpg"><img src="img/09.jpg" alt="hot pizza"></a></div>
-			<div class="img_item"><a href="img/10.jpg"><img src="img/10.jpg" alt="hot pizza"></a></div>
-			<div class="img_item"><a href="img/11.jpg"><img src="img/11.jpg" alt="hot pizza"></a></div>
-			<div class="img_item"><a href="img/12.jpg"><img src="img/12.jpg" alt="hot pizza"></a></div>
-			<div class="img_item"><a href="img/01.jpg"><img src="img/01.jpg" alt="hot pizza"></a></div>
-			<div class="img_item"><a href="img/02.jpg"><img src="img/02.jpg" alt="hot pizza"></a></div>
-			<div class="img_item"><a href="img/03.jpg"><img src="img/03.jpg" alt="hot pizza"></a></div>
-			<div class="img_item"><a href="img/04.jpg"><img src="img/04.jpg" alt="hot pizza"></a></div>
+			<div class="img_item row-1 col-2"><a href="img/02.jpg"><img src="img/02.jpg" alt="hot pizza"><p>this is title of photo</p></a></div>
+			<div class="img_item row-2 col-3"><a href="img/03.jpg"><img src="img/03.jpg" alt="hot pizza"><p>this is title of photo</p></a></div>
+			<div class="img_item row-1 col-2"><a href="img/04.jpg"><img src="img/04.jpg" alt="hot pizza"><p>this is title of photo</p></a></div>
+			<div class="img_item row-2 col-3"><a href="img/05.jpg"><img src="img/05.jpg" alt="hot pizza"><p>this is title of photo</p></a></div>
+			<div class="img_item row-3 col-2"><a href="img/06.jpg"><img src="img/06.jpg" alt="hot pizza"><p>this is title of photo</p></a></div>
+			<div class="img_item row-3 col-2"><a href="img/07.jpg"><img src="img/07.jpg" alt="hot pizza"><p>this is title of photo</p></a></div>
+			<div class="img_item row-3 col-2"><a href="img/08.jpg"><img src="img/08.jpg" alt="hot pizza"><p>this is title of photo</p></a></div>
+			<div class="img_item row-2 col-2"><a href="img/09.jpg"><img src="img/09.jpg" alt="hot pizza"><p>this is title of photo</p></a></div>
+			<div class="img_item row-3 col-3"><a href="img/10.jpg"><img src="img/10.jpg" alt="hot pizza"><p>this is title of photo</p></a></div>
+			<div class="img_item row-2 col-2"><a href="img/11.jpg"><img src="img/11.jpg" alt="hot pizza"><p>this is title of photo</p></a></div>
+			<div class="img_item row-2 col-3"><a href="img/01.jpg"><img src="img/01.jpg" alt="hot pizza"><p>this is title of photo</p></a></div>
+			<div class="img_item row-1 col-2"><a href="img/02.jpg"><img src="img/02.jpg" alt="hot pizza"><p>this is title of photo</p></a></div>
+			<div class="img_item row-2 col-3"><a href="img/03.jpg"><img src="img/03.jpg" alt="hot pizza"></a></div>
+			<div class="img_item row-1 col-2"><a href="img/04.jpg"><img src="img/04.jpg" alt="hot pizza"></a></div>
+			<div class="img_item row-3 col-4"><a href="img/05.jpg"><img src="img/05.jpg" alt="hot pizza"></a></div>
+			<div class="img_item row-2 col-1"><a href="img/06.jpg"><img src="img/06.jpg" alt="hot pizza"></a></div>
+			<div class="img_item row-3 col-2"><a href="img/07.jpg"><img src="img/07.jpg" alt="hot pizza"></a></div>
+			<div class="img_item row-3 col-2"><a href="img/08.jpg"><img src="img/08.jpg" alt="hot pizza"></a></div>
+			<div class="img_item row-2 col-2"><a href="img/09.jpg"><img src="img/09.jpg" alt="hot pizza"></a></div>
+			<div class="img_item row-3 col-3"><a href="img/10.jpg"><img src="img/10.jpg" alt="hot pizza"></a></div>
+			<div class="img_item row-2 col-2"><a href="img/11.jpg"><img src="img/11.jpg" alt="hot pizza"></a></div>
+			<div class="img_item row-2 col-3"><a href="img/01.jpg"><img src="img/01.jpg" alt="hot pizza"></a></div>
+			<div class="img_item row-1 col-2"><a href="img/02.jpg"><img src="img/02.jpg" alt="hot pizza"></a></div>
+			<div class="img_item row-2 col-3"><a href="img/03.jpg"><img src="img/03.jpg" alt="hot pizza"></a></div>
+			<div class="img_item row-1 col-2"><a href="img/04.jpg"><img src="img/04.jpg" alt="hot pizza"></a></div>
+			<div class="img_item row-1 col-1"><a href="img/12.jpg"><img src="img/12.jpg" alt="hot pizza"><p>this is title of photo</p></a></div>
+			<div class="img_item row-1 col-1"><a href="img/09.jpg"><img src="img/09.jpg" alt="hot pizza"></a></div>
+			<div class="img_item row-1 col-1"><a href="img/10.jpg"><img src="img/10.jpg" alt="hot pizza"></a></div>
+			<div class="img_item row-1 col-1"><a href="img/11.jpg"><img src="img/11.jpg" alt="hot pizza"></a></div>
+			<div class="img_item row-1 col-1"><a href="img/12.jpg"><img src="img/12.jpg" alt="hot pizza"></a></div>
+			<div class="img_item row-1 col-1"><a href="img/09.jpg"><img src="img/09.jpg" alt="hot pizza"></a></div>
+			<div class="img_item row-1 col-1"><a href="img/10.jpg"><img src="img/10.jpg" alt="hot pizza"></a></div>
+			<div class="img_item row-1 col-1"><a href="img/11.jpg"><img src="img/11.jpg" alt="hot pizza"></a></div>
+			<div class="img_item row-1 col-1"><a href="img/12.jpg"><img src="img/12.jpg" alt="hot pizza"></a></div>
+			<div class="img_item row-1 col-1"><a href="img/09.jpg"><img src="img/09.jpg" alt="hot pizza"></a></div>
+			<div class="img_item row-1 col-1"><a href="img/10.jpg"><img src="img/10.jpg" alt="hot pizza"></a></div>
+			<div class="img_item row-1 col-1"><a href="img/11.jpg"><img src="img/11.jpg" alt="hot pizza"></a></div>
+			<div class="img_item row-1 col-1"><a href="img/12.jpg"><img src="img/12.jpg" alt="hot pizza"></a></div>
+
 		</div>
 
 		<div class="footer"> <!--foooter-->

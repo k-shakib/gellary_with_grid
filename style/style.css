@@ -1,6 +1,3 @@
-/* in this project i try to use only grid proparty as much i can.*/
-
-/* don't use any image which ratio of height/width is more then 3 */
 
 /*pre define stle*/
 *{
@@ -10,29 +7,50 @@
 }
 /* style for whole body secction*/
 body{
-  font-family: arial, helvetica;
+  font-family: roboto, sans-serif;
   background: #f0f0f0;
-
+  /* width: 100%; */
+  /* margin:0 auto; */
 }
 
 /*
   this variable are used to make the site responsive.
 */
 :root {
-  --columns_in_gallery: 4;
-  --grid_gap: 20px;
-  --logo_fsize: 1.8rem;
-  --btn_fsize:1rem;
-  --title_fsize: 0.9rem;
+  --columns_in_gallery: 8;
+  --grid_gap: 22px;
+  --logo_fsize: 1.75rem;
+  --title_fsize: 1.35rem;
+  --GTR:145px;
 }
+
+/* framework which we will use */
+.grid {
+    grid-gap: var(--grid_gap);
+    /*here var(--grid_gap) is define how much gap between grid items */
+    display: grid !important;
+    grid-template-columns: repeat(var(--columns_in_gallery),1fr);
+    width: 100%;
+}
+.col-1 {grid-column: span 1;}
+.col-2 {grid-column: span 2;}
+.col-3 {grid-column: span 3;}
+.col-4 {grid-column: span 4;}
+.row-1 {grid-row: span 1;}
+.row-2 {grid-row: span 2;}
+.row-3 {grid-row: span 3;}
+
 
 /*
   this is the main container , which contain the whole project.
   and the sections are menu-bar then the gallery section and the footer section.
 */
 .container{
-  margin: 0 auto;
-  width: 95%;/*fixed the limit of main container width*/
+  width: 95%;
+  margin:0 auto;
+
+  /* max-width: 120rem; */
+  /*fixed the limit of main container width*/
 }
 
 /*
@@ -40,7 +58,6 @@ body{
 */
 .menubar{
   padding: 0.5rem 0;
-
   width: 100%;
   display: grid;
   grid-template-columns:auto max-content ;
@@ -63,19 +80,13 @@ body{
 }
 
 
-
-
 /*this is mainly the image container for make a gallery.*/
 .img_container{
   margin: 2rem auto;
-  justify-items: center;
-  display: grid;
-  grid-template-columns: repeat(var(--columns_in_gallery),1fr);
-  /*here var(--column_in_gallery) is define how meny column we want to draw in gallery.*/
-  grid-template-rows: 1fr;
-  grid-gap: var(--grid_gap);
-  /*here var(--grid_gap) is define how much gap between grid items */
-  grid-auto-rows: 1fr;
+  align-content: center;
+  grid-template-rows: var(--GTR);
+  grid-auto-rows: var(--GTR);
+  grid-auto-flow: dense;
 }
 .img_item{
   position: relative;
@@ -104,18 +115,17 @@ body{
   background: #ffffff76;
   color: #0f0f0fff;
   text-align: justify;
+  text-align-last: left;
 }
 .img_item:hover img{
   opacity: 0.8;
 }
-
 
 .footer{
   background: #d0d0d0d0 ;
   text-align: center;
   padding: 0.5rem;
 }
-
 
 p{
   font-size: var(--title_fsize);
@@ -124,73 +134,161 @@ p{
   font-size: var(--logo_fsize);
 }
 
-
-
 @media only screen and (min-width: 7500px) {
   :root {
-    --columns_in_gallery: 12;
+    --columns_in_gallery: 15;
     --grid_gap: 75px;
     --logo_fsize: 4rem;
     --title_fsize: 2.5rem;
+    --GTR:430px;
   }
 }
 @media only screen and (min-width:5000px) and (max-width: 7499px) {
   :root {
-    --columns_in_gallery: 10;
+    --columns_in_gallery: 12;
     --grid_gap: 65px;
     --logo_fsize: 3.5rem;
     --title_fsize: 2.5rem;
+    --GTR:395px;
   }
 }
-@media only screen and (min-width:3000px) and (max-width: 4999px) {
+@media only screen and (min-width:4000px) and (max-width: 4999px) {
   :root {
-    --columns_in_gallery: 8;
+    --columns_in_gallery: 10;
     --grid_gap: 50px;
     --logo_fsize: 3rem;
     --title_fsize: 1.7rem;
+    --GTR:380px;
+  }
+}
+@media only screen and (min-width:3000px) and (max-width:3999px) {
+  :root{
+    --columns_in_gallery: 9;
+    --grid_gap: 45px;
+    --logo_fsize: 2.75rem;
+    --title_fsize: 1.65rem;
+    --GTR:325px;
   }
 }
 @media only screen and (min-width:2000px) and (max-width: 2999px) {
   :root {
-    --columns_in_gallery: 6;
+    --columns_in_gallery: 9;
     --grid_gap: 40px;
     --logo_fsize: 2.5rem;
-    --title_fsize: 1.7rem;
+    --title_fsize: 1.6rem;
+    --GTR:230px;
   }
 }
 @media only screen and (min-width:1700px) and (max-width: 1999px) {
   :root {
-    --columns_in_gallery: 5;
+    --columns_in_gallery: 8;
     --grid_gap: 30px;
     --logo_fsize: 2rem;
-    --title_fsize: 1.4rem;
+    --title_fsize: 1.5rem;
+    --GTR:195px;
   }
 }
-@media only screen and (min-width:560px) and (max-width: 960px) {
+@media only screen and (min-width:1500px) and (max-width: 1699px) {
   :root {
-    --columns_in_gallery: 3;
+    --columns_in_gallery: 8;
+    --grid_gap: 25px;
+    --logo_fsize: 1.85rem;
+    --title_fsize: 1.4rem;
+    --GTR:170px;
+  }
+}
+@media only screen and (min-width:1100px) and (max-width: 1299px) {
+  :root {
+    --columns_in_gallery: 7;
+    --grid_gap: 20px;
+    --logo_fsize: 1.7rem;
+    --title_fsize: 1.3rem;
+    --GTR:145px;
+  }
+}
+@media only screen and (min-width:960px) and (max-width: 1099px) {
+  :root {
+    --columns_in_gallery: 7;
+    --grid_gap: 20px;
+    --logo_fsize: 1.7rem;
+    --title_fsize: 1.3rem;
+    --GTR:123px;
+  }
+}
+@media only screen and (min-width:800px) and (max-width: 959px) {
+  :root {
+    --columns_in_gallery: 6;
     --grid_gap: 15px;
     --logo_fsize: 1.5rem;
     --title_fsize: 1.1rem;
+    --GTR:125px;
+  }
+  .img_item:hover p{
+    padding: 0.8rem;
   }
 }
-@media only screen and (min-width:400px) and (max-width: 559px) {
+@media only screen and (min-width:600px) and (max-width: 799px) {
   :root {
-    --columns_in_gallery: 2;
+    --columns_in_gallery: 6;
     --grid_gap: 12px;
     --logo_fsize: 1.2rem;
-    --title_fsize: 0.8rem;
+    --title_fsize: 0.9rem;
+    --GTR:100px;
+  }
+  .img_item:hover p{
+    padding: 0.7rem;
   }
 }
 
-@media only screen and (min-width:50px) and (max-width: 399px) {
+@media only screen and (min-width:400px) and (max-width: 599px) {
   :root {
-    --columns_in_gallery: 1;
+    --columns_in_gallery: 4;
     --grid_gap: 10px;
     --logo_fsize: 1rem;
+    --title_fsize: 0.75rem;
+    --GTR:100px;
+  }
+  .img_item:hover p{
+    padding: 0.6rem;
+  }
+}
+@media only screen and (min-width:300px) and (max-width: 399px) {
+  :root {
+    --columns_in_gallery: 3;
+    --grid_gap: 8px;
+    --logo_fsize: .9rem;
     --title_fsize: 0.65rem;
+    --GTR:75px;
+  }
+  .img_item:hover p{
+    padding: 0.45rem;
   }
   .menu_items{
     display: none;
   }
+  .col-1,.col-2{ grid-column: span 1;}
+  .col-3,.col-4{ grid-column: span 2;}
+  .row-1,.row-2{grid-row: span 1;}
+  .row-3,.row-4{grid-row: span 2;}
+
+}
+@media only screen and (max-width: 299px) {
+  :root {
+    --columns_in_gallery: 2;
+    --grid_gap: 7px;
+    --logo_fsize: .85rem;
+    --title_fsize: 0.6rem;
+    --GTR:70px;
+  }
+  .img_item:hover p{
+    padding: 0.45rem;
+  }
+  .menu_items{
+    display: none;
+  }
+  .col-1,.col-2{ grid-column: span 1;}
+  .col-3,.col-4{ grid-column: span 2;}
+  .row-1,.row-2{grid-row: span 1;}
+  .row-3,.row-4{grid-row: span 2;}
+
 }
